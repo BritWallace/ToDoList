@@ -1,37 +1,66 @@
 using System.Collections.Generic;
-namespace ToDoList.Models
+using MySql.Data.MySqlClient;
 
+namespace ToDoList.Models
 {
   public class Item
   {
-  public string Description { get; set; }
+    public string Description { get; set; }
+    public int Id { get; }
 
-  public int Id { get; }
-  private static List<Item> _instances = new List<Item> {};
-
-  public Item(string description)
+    public Item(string description)
     {
       Description = description;
-      _instances.Add(this); 
-      Id = _instances.Count;
     }
-
-  public static List<Item> GetAll()
+    public Item(string description, int id)
     {
-      return _instances;
+      Description = description;
+      Id = id;
     }
 
+    public static List<Item> GetAll()
+    {
+      List<Item> allItems = new List<Item> { };
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = "SELECT * FROM items;";
+      MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
+      while (rdr.Read())
+      {
+          int itemId = rdr.GetInt32(0);
+          string itemDescription = rdr.GetString(1);
+          Item newItem = new Item(itemDescription, itemId);
+          allItems.Add(newItem);
+      }
+      conn.Close();
+      if (conn != null)
+      {
+          conn.Dispose();
+      }
+      return allItems;
+    }
+
+    
     public static void ClearAll()
-  {
-    _instances.Clear();
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = "DELETE FROM items;";
+      cmd.ExecuteNonQuery();
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
+      }
   }
 
-  public static Item Find(int searchId)
-        {
-            return _instances[searchId - 1];
-        }
-  
+    public static Item Find(int searchId)
+    {
+      // Temporarily returning placeholder item to get beyond compiler errors until we refactor to work with database.
+      Item placeholderItem = new Item("placeholder item");
+      return placeholderItem;
+    }
   }
 }
-
-  
