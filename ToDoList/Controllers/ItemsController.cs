@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
 using ToDoList.Models;
 using System.Collections.Generic;
@@ -16,14 +17,17 @@ namespace ToDoList.Controllers
     }
 
     public ActionResult Index()
-    {
-      List<Item> model = _db.Items.ToList();
-      return View(model);
-    }
+{
+    List<Item> model = _db.Items.Include(item => item.Category).ToList();
+    ViewBag.PageTitle = "View All Items";
+    return View(model);
+    
+}
 
     public ActionResult Create()
     {
-      return View();
+      ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
+  return View();
     }
 
     [HttpPost]
@@ -41,10 +45,10 @@ namespace ToDoList.Controllers
     }
     public ActionResult Edit(int id)
     {
-      var thisItem = _db.Items.FirstOrDefault(item => item.ItemId == id);
+      Item thisItem = _db.Items.FirstOrDefault(item => item.ItemId == id);
+      ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
       return View(thisItem);
     }
-
     [HttpPost]
     public ActionResult Edit(Item item)
     {
