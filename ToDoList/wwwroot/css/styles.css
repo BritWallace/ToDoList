@@ -72,3 +72,71 @@ body {
   border: 3px solid green;
   padding: 10px;
 } */
+
+
+
+
+
+.container {
+  background-color: rgba(53, 215, 255, 0.712);
+  padding: 30px 10px;
+  border-radius: 30px;
+  margin-top: 15px;
+}
+body {
+  opacity: 0.79;
+  font-family: 'Zen Tokyo Zoo', cursive;
+  background-color: transparent;
+  font-weight: bold;
+  text-shadow: rgb(111, 3, 212);
+  text-align: center;
+  color: black;
+
+}
+.btn-info {
+  width: 80px;
+  margin: auto;
+  display: block;
+  font-weight: bold;
+  color: rgb(224, 123, 255);
+  background-color: mediumblue;
+  opacity: .80;
+}
+h1 {
+  font-family: 'Zen Tokyo Zoo', cursive;
+  color: rgb(0, 81, 255);
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  margin: 25px 0;
+  text-shadow: darkviolet;
+}
+h2, h3 {
+  font-family: 'Zen Tokyo Zoo', cursive;
+  text-shadow: rgb(0, 81, 255);
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  margin: 25px 0;
+  color: darkviolet;
+}
+html {
+  background-image: url(https://t3.ftcdn.net/jpg/03/07/22/02/360_F_307220247_Oy1sghv8j5CPHmXBsncFN17UD7JViLcw.jpg);
+  background-repeat: no-repeat;
+  background-position: relative;
+  background-size: cover;
+  overflow: auto;
+  background-position-x: 0;
+  background-position-y: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+h4, h5, li {
+  font-family: 'Zen Tokyo Zoo', cursive;
+  text-shadow: rgb(0, 81, 255);
+  color: magenta;
+  font-weight: bold;
+  size: 20rem;
+
+}
