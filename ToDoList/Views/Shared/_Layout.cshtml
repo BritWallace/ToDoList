@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
-  
-    @RenderBody()
-    @await Html.PartialAsync("Footer")
+
+    <div id="img">
+      @RenderBody()
+      @await Html.PartialAsync("Footer")
+    </div>
   </body>
 </html>
