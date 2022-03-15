@@ -10,13 +10,13 @@ div#footer {
 }
 
 #color {
-  color: pink;
+  color: rgb(234, 217, 219);
   font-family: monospace;
   box-shadow:rgb(197, 94, 53)
 }
 
 #linkColor {
-  color: rgb(151, 135, 181);
+  color: rgb(184, 188, 215);
   font-family: monospace;
 }
 
@@ -29,7 +29,7 @@ div#footer {
 }
 
 div.test-color a {
-  color: red;
+  color: rgb(0, 153, 112);
 }
 
 #img {
@@ -51,7 +51,7 @@ div.test-color a {
 	display: inline-block;
   font-size: 16px;
 	padding: 15px 450px;
-	color: black;
+	color: rgb(240, 231, 231);
 	
 }
 
@@ -66,31 +66,22 @@ body {
   
 }
 
-/* .center {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
-} */
-
-
-
-
-
 .container {
   background-color: rgba(53, 215, 255, 0.712);
+  margin: auto;
   padding: 30px 10px;
   border-radius: 30px;
-  margin-top: 15px;
+  margin-top: 50px;
+  size:100rem;
 }
 body {
   opacity: 0.79;
-  font-family: 'Zen Tokyo Zoo', cursive;
+  font-family: 'monospace';
   background-color: transparent;
   font-weight: bold;
   text-shadow: rgb(111, 3, 212);
   text-align: center;
-  color: black;
+  color: rgba(250, 249, 249, 0.939);
 
 }
 .btn-info {
@@ -103,8 +94,8 @@ body {
   opacity: .80;
 }
 h1 {
-  font-family: 'Zen Tokyo Zoo', cursive;
-  color: rgb(0, 81, 255);
+  font-family: 'monospace';
+  color: rgb(232, 234, 238);
   text-align: center;
   font-style: italic;
   font-weight: bold;
@@ -112,13 +103,13 @@ h1 {
   text-shadow: darkviolet;
 }
 h2, h3 {
-  font-family: 'Zen Tokyo Zoo', cursive;
-  text-shadow: rgb(0, 81, 255);
+  font-family: 'monospace';
+  text-shadow: rgb(220, 222, 228);
   text-align: center;
   font-style: italic;
   font-weight: bold;
   margin: 25px 0;
-  color: darkviolet;
+  color: rgb(224, 206, 231);
 }
 html {
   background-image: url(https://t3.ftcdn.net/jpg/03/07/22/02/360_F_307220247_Oy1sghv8j5CPHmXBsncFN17UD7JViLcw.jpg);
@@ -133,10 +124,10 @@ html {
   padding: 0;
 }
 h4, h5, li {
-  font-family: 'Zen Tokyo Zoo', cursive;
-  text-shadow: rgb(0, 81, 255);
-  color: magenta;
+  font-family: 'monospace';
+  text-shadow: rgb(180, 143, 180);
+  color: rgb(219, 189, 219);
   font-weight: bold;
-  size: 20rem;
+  size:100rem;
 
 }

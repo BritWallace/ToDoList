@@ -1,3 +1,5 @@
+using System.Linq;
+
 @{
   Layout = "_Layout";
 }
@@ -15,10 +17,12 @@
 @foreach (Item item in Model)
 {
   <li>@Html.ActionLink($"{item.Description}", "Details", new { id = item.ItemId }, new {id = "linkColor"})</li>
-  <p>Due Date: @Html.DisplayName($"{item.DueDate}")</p>
+  <p>Due: @Html.DisplayName($"{item.DueDate}")</p>
 }
 <div class="test-color">
   <p> Test Div </p>
   <p>@Html.ActionLink("Add new item", "Create")</p>
 </div>
 </body>
+
+

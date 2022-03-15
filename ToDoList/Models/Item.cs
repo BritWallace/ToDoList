@@ -16,5 +16,16 @@ namespace ToDoList.Models
 
 
         public virtual ICollection<CategoryItem> JoinEntities { get;}
+
+
     }
 }
+
+
+//  List<int> DueDate = new List<int>()
+// {
+//     3/22/2022, 7, 2, 61, 14
+// };
+// List<int> sortedDueDate = DueDate.OrderBy(DueDate => DueDate).ToList();
+// foreach (int number in sortedDueDate)
+//     Console.WriteLine(DueDate); 
