@@ -11,12 +11,14 @@
   <h3>No categories have been added yet!</h3>
 } 
 
-<ul>
+<div class="categoryItems">
   @foreach(Category category in Model)
   {
     <li>@Html.ActionLink($"{category.Name}", "Details", new { id = category.CategoryId })</li>
   }
-</ul>
+</div>
 
-<p>@Html.ActionLink("Add new category", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<div class="test-color">
+  <p>@Html.ActionLink("Add new category", "Create")</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+</div>

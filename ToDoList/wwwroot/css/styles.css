@@ -12,6 +12,7 @@ div#footer {
 #color {
   color: rgb(234, 217, 219);
   font-family: monospace;
+  margin: auto;
   box-shadow:rgb(197, 94, 53)
 }
 
@@ -22,35 +23,32 @@ div#footer {
 
 .splash {
   background-color: aqua;
+  margin: auto;
   font-family: monospace;
   padding: 50px 100px;
   top: 50%;
-  
-}
+  }
 
 div.test-color a {
-  color: rgb(0, 153, 112);
+  color: rgb(94, 30, 102);
+  font-family: monospace;
+  font-size: 50px;
+  text-shadow: 1px 1px 1px white;  
 }
 
-#img {
-  background: url("https://www.istockphoto.com/photo/background-of-galaxy-and-stars-gm1035676256-277258896?utm_source=unsplash&utm_medium=affiliate&utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fspace&utm_term=space%3A%3A%3A");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 695px;
-  padding: 60px 30px 0 30px;
-  margin-top: 50px;
+div.categoryItems a {
+  font-size: 20px;
+  color: rgb(180, 143, 180);
 }
 
 #color {
-  background-color :rgb(197, 94, 53) ; 
-	position: -webkit-sticky;
-  position: sticky;
+  background-color :rgb(161, 18, 142) ; 
   top: 0;
 	font-family: monospace;
 	text-shadow: 2px 2px #54044f;
 	display: inline-block;
-  font-size: 16px;
-	padding: 15px 450px;
+  font-size: 20px;
+	padding: 15px;
 	color: rgb(240, 231, 231);
 	
 }
@@ -90,7 +88,7 @@ body {
   display: block;
   font-weight: bold;
   color: rgb(224, 123, 255);
-  background-color: mediumblue;
+  background-color: rgb(14, 14, 32);
   opacity: .80;
 }
 h1 {
@@ -130,4 +128,21 @@ h4, h5, li {
   font-weight: bold;
   size:100rem;
 
+}
+
+/* #img {
+  background: url("https://www.istockphoto.com/photo/background-of-galaxy-and-stars-gm1035676256-277258896?utm_source=unsplash&utm_medium=affiliate&utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fspace&utm_term=space%3A%3A%3A");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 695px;
+  padding: 60px 30px 0 30px;
+  margin-top: 50px;
+} */
+
+input[type=submit] {
+ background: rgb(78, 5, 78);
+ color: rgba(53, 215, 255, 0.712);
+ border: 0 none;
+ padding: 5px;
+ font-family: 'monospace';
 }
