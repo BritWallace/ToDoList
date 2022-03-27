@@ -13,6 +13,8 @@ namespace ToDoList.Models
         public string Description { get; set; }
         public bool Completed { get; set; }
         public string DueDate {get; set; }
+        public virtual ApplicationUser User { get; set; } //new line
+
 
 
         public virtual ICollection<CategoryItem> JoinEntities { get;}
@@ -22,10 +24,3 @@ namespace ToDoList.Models
 }
 
 
-//  List<int> DueDate = new List<int>()
-// {
-//     3/22/2022, 7, 2, 61, 14
-// };
-// List<int> sortedDueDate = DueDate.OrderBy(DueDate => DueDate).ToList();
-// foreach (int number in sortedDueDate)
-//     Console.WriteLine(DueDate); 
